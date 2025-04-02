@@ -1,0 +1,36 @@
+{
+  "{{chrome}}.manifest_version": 3,
+  "{{firefox}}.manifest_version": 2,
+  "name": "WatchBuddy",
+  "description": "Uzak mesafelerin küçük dostu WatchBuddy!",
+  "version": "0.1",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "{{chrome}}.action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "{{firefox}}.browser_action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "background": {
+    "{{chrome}}.service_worker": "src/background/background.js",
+    "{{firefox}}.scripts": ["src/background/background.js"]
+  },
+  "options_page": "src/live/live.html",
+  "permissions": [
+    "storage",
+    "identity",
+    "tabs"
+  ],
+  "oauth2": {
+    "client_id": "511676359244-bn4atbb2l7dr9eiaehh93qi235mmt514.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key": "-----BEGIN PUBLIC KEY-----\neailighfdlfianamddnbngiokbldofnj\n-----END PUBLIC KEY-----"
+}
